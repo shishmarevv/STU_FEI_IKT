@@ -3,7 +3,7 @@ close("all")
 clc
 %% Exercise 1
 i1 = -180:1:180;
-i2 = -2*pi:1:2*pi;
+i2 = -2*pi:0.1:2*pi;
 i3 = 0:0.2:50;
 i4 = -5:0.1:5;
 figure()
@@ -22,9 +22,9 @@ set(h3, 'Color', 'k');
 x = [-1, 1, 0];
 y = [-1/sqrt(3), -1/sqrt(3), 2/sqrt(3)];
 figure()
-fill(x, y, 'w', 'EdgeColor', 'b', 'LineWidth', 4);
+fill(x, y, 'r', 'EdgeColor', 'b', 'LineWidth', 4);
 hold on;
-text(0, 0, 'TROJUHOLNIK', 'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle', 'FontSize', 8);
+text(0, 0, 'TROJUHOLNIK', 'HorizontalAlignment', 'center', 'FontSize', 8);
 %% Exercise 3
 [x, y] = meshgrid(-2:0.05:2, -2:0.05:2);
 z = x.*exp(-x.^2-y.^2);
